@@ -15,10 +15,11 @@ _Application Features:_
 ***
 [Link to GitHub Repo](https://github.com/originator1/Third-Party-APIs-Work-Day-Scheduler)
 
-[Deployable Application Link]()
+[Deployable Application Link](https://originator1.github.io/Third-Party-APIs-Work-Day-Scheduler/)
 
 #### Application Screenshot
-[](Assets\CSS\workDayPlanner.jpg)
+![Minion](Assets\CSS\AppScreenshot.jpg)
+
 
 
 
