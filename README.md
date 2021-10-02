@@ -17,9 +17,8 @@ _Application Features:_
 
 [Deployable Application Link]()
 
-
-
-
+#### Application Screenshot
+[](Assets\CSS\workDayPlanner.jpg)
 
 
 

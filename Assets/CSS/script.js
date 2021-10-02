@@ -6,7 +6,7 @@ var saveButton1 = document.querySelector("#save1");
 
 // var createDiv = document.createElement
 
-saveButton1.addEventListener("click", function() {
+saveButton1.addEventListener("click", function () {
     localStorage.setItem("text1", textBoxInput.value);
 
 });
@@ -19,13 +19,36 @@ $("#currentDay").text(liveTime);
 
 
 //moment time formated to a single digit hr
-var thisHour = moment().format("h");
-// console.log(thisHour);
+var thisHour = moment().hour();
+console.log(thisHour);
 
-//add time attribute to date of present
+//var x = $("#rowNum1").attr("value");
+
+// var y = document.querySelector("#rowNum1")
+// y.getAttribute("value") //returns 9
+// y.setAttribute("value", "James")
 
 
 
+$(".description").each(function (i, value) {
+    var timeBlockVal = parseInt(value.id);
+    console.log(timeBlockVal, thisHour)
+
+    if (timeBlockVal === thisHour) {
+        $(this).addClass("present");
+        $(this).removeClass("future");
+        $(this).removeClass("past");
+    } else if (timeBlockVal > thisHour) {
+        $(this).addClass("future");
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+
+    } else {
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+    }
+})
 
 
 
@@ -34,23 +57,23 @@ var thisHour = moment().format("h");
 
 // signUpButton.addEventListener("click", function(event) {
 //     event.preventDefault();
-  
+
 //     var email = document.querySelector("#email").value;
 //     var password = document.querySelector("#password").value;
-  
+
 //     if (email === "") {
 //       displayMessage("error", "Email cannot be blank");
 //     } else if (password === "") {
 //       displayMessage("error", "Password cannot be blank");
 //     } else {
 //       displayMessage("success", "Registered successfully");
-  
+
 //       localStorage.setItem("email", email);
 //       localStorage.setItem("password", password);
 //       renderLastRegistered();
 //     }
 //   });
-  
+
 // var objectList: {
 //     : ""
 // }
